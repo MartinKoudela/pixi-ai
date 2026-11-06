@@ -1,0 +1,15 @@
+CLAUDE.md
+.claude/
+
+logs/
+world/
+
+.idea/
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+.DS_Store

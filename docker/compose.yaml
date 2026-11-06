@@ -1,0 +1,20 @@
+services:
+  pixi:
+    build: .
+    image: pixi-cage
+    container_name: pixi
+    restart: unless-stopped
+
+    network_mode: none
+    mem_limit: 512m
+    cpus: 1
+    pids_limit: 100
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+
+    volumes:
+      - ../world/home:/home/pixi
+      - ../world/library:/library:ro
